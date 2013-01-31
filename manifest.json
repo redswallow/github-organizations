@@ -1,0 +1,20 @@
+{
+  "name": "github-organizations",
+   "version": "0.2",
+   "manifest_version": 2,
+   "description": "allow user to bookmark github organizations",
+   "icons": {
+      "16": "images/icon128.png",
+      "48": "images/icon128.png",
+      "128": "images/icon128.png"
+   }, 
+    "content_scripts": [{
+      "matches":["https://github.com/*"],
+      "js":["libs/jquery.min.js","repositories.js"]
+   }],
+   "permissions": [
+      "https://github.com/*",
+      "https://*.github.com/*" 
+   ],
+   "update_url": "https://raw.github.com/redswallow/github-organizations/master/updates.xml"
+}
